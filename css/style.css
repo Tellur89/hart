@@ -572,7 +572,7 @@ body {
     width: 15rem; }
 
 .icon--section {
-  color: #d37d85; }
+  color: #c34954; }
   .icon--section:hover {
     transform: scale(1.1);
     transition: all .3s; }
@@ -763,7 +763,8 @@ body {
   .MySlides__img {
     width: 62.4rem;
     height: 42.5rem;
-    background-size: 100% 100%; }
+    background-size: 100% 100%;
+    box-shadow: 1px 1px 15px #313131; }
     @media (max-width: 75em) {
       .MySlides__img {
         width: 56.16rem;
@@ -1026,7 +1027,7 @@ body {
     position: absolute;
     top: 40%;
     left: 17%;
-    background-image: linear-gradient(to right bottom, rgba(113, 149, 101, 0.8), rgba(113, 149, 101, 0.8));
+    background-image: linear-gradient(to right bottom, rgba(155, 189, 143, 0.9), rgba(155, 189, 143, 0.9));
     width: 40rem;
     height: min-content;
     border-radius: 10px;
