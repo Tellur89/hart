@@ -787,7 +787,7 @@ body {
   margin-right: 7rem; }
 
 .about {
-  background-image: url(../img/pub.jpg);
+  background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/pub.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
