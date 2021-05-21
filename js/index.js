@@ -17,8 +17,8 @@ function showSlides() {
 
 // SOCIAL FEED
 window.PixleeAsyncInit = function () {
-  Pixlee.init({ apiKey: "BGDRs6-KFxgt_WMZuTtq" });
-  Pixlee.addSimpleWidget({ widgetId: "32657" });
+  Pixlee.init({ apiKey: "-JbCLpups-8uaIYTgxTQ" });
+  Pixlee.addSimpleWidget({ widgetId: "31755" });
 };
 
 // ABOUT READ MORE
@@ -55,12 +55,18 @@ const btnCloseModalJobs = document.querySelector(".close-modal-jobs");
 const btnCloseModalLoyal = document.querySelector(".close-modal-loyal");
 const btnCloseModalFunctions = document.querySelector(".close-modal-functions");
 
+const btnsOpenModalEventsNav = document.querySelector(".btn-whatson--nav");
 const btnsOpenModalEvents = document.querySelector(".btn-whatson");
 const btnsOpenModalJobs = document.querySelector(".btn-jobs");
 const btnsOpenModalLoyal = document.querySelector(".btn-loyal");
 const btnsOpenModalFunctions = document.querySelector(".btn-functions");
 
 // //OPEN
+const openModalEventsNav = function () {
+  events.classList.remove("hidden");
+  overlayEvents.classList.remove("hidden");
+};
+
 const openModalEvents = function () {
   events.classList.remove("hidden");
   overlayEvents.classList.remove("hidden");
@@ -103,6 +109,7 @@ const closeModalFunctions = function () {
 };
 
 // //OPEN FUNCTIONS
+btnsOpenModalEventsNav.addEventListener("click", openModalEvents);
 btnsOpenModalEvents.addEventListener("click", openModalEvents);
 btnsOpenModalJobs.addEventListener("click", openModalJobs);
 btnsOpenModalLoyal.addEventListener("click", openModalLoyal);

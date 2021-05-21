@@ -989,9 +989,7 @@ body {
     .grid-menus__item--2 {
       background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/breakfast.jpg); }
     .grid-menus__item--3 {
-      background-image: url(../img/food.jpg);
-      background-size: cover;
-      background-position: 50% 80%; }
+      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/food.jpg); }
     .grid-menus__item--4 {
       background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/kids.JPG); }
     .grid-menus__item--5 {
