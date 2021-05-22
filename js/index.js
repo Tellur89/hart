@@ -41,27 +41,27 @@ function myFunction() {
 
 //MODAL WINDOW
 const events = document.querySelector(".events");
-const jobs = document.querySelector(".jobs");
+// const jobs = document.querySelector(".jobs");
 const loyal = document.querySelector(".loyal");
 const functions = document.querySelector(".functions");
 
 const overlayEvents = document.querySelector(".overlay-events");
-const overlayJobs = document.querySelector(".overlay-jobs");
+// const overlayJobs = document.querySelector(".overlay-jobs");
 const overlayLoyal = document.querySelector(".overlay-loyal");
 const overlayFunctions = document.querySelector(".overlay-functions");
 
 const btnCloseModalEvents = document.querySelector(".close-modal-events");
-const btnCloseModalJobs = document.querySelector(".close-modal-jobs");
+// const btnCloseModalJobs = document.querySelector(".close-modal-jobs");
 const btnCloseModalLoyal = document.querySelector(".close-modal-loyal");
 const btnCloseModalFunctions = document.querySelector(".close-modal-functions");
 
 const btnsOpenModalEventsNav = document.querySelector(".btn-whatson--nav");
 const btnsOpenModalEvents = document.querySelector(".btn-whatson");
-const btnsOpenModalJobs = document.querySelector(".btn-jobs");
+// const btnsOpenModalJobs = document.querySelector(".btn-jobs");
 const btnsOpenModalLoyal = document.querySelector(".btn-loyal");
 const btnsOpenModalFunctions = document.querySelector(".btn-functions");
 
-// //OPEN
+//OPEN
 const openModalEventsNav = function () {
   events.classList.remove("hidden");
   overlayEvents.classList.remove("hidden");
@@ -72,10 +72,10 @@ const openModalEvents = function () {
   overlayEvents.classList.remove("hidden");
 };
 
-const openModalJobs = function () {
-  jobs.classList.remove("hidden");
-  overlayJobs.classList.remove("hidden");
-};
+// const openModalJobs = function () {
+//   jobs.classList.remove("hidden");
+//   overlayJobs.classList.remove("hidden");
+// };
 
 const openModalLoyal = function () {
   loyal.classList.remove("hidden");
@@ -93,10 +93,10 @@ const closeModalEvents = function () {
   overlayEvents.classList.add("hidden");
 };
 
-const closeModalJobs = function () {
-  jobs.classList.add("hidden");
-  overlayJobs.classList.add("hidden");
-};
+// const closeModalJobs = function () {
+//   jobs.classList.add("hidden");
+//   overlayJobs.classList.add("hidden");
+// };
 
 const closeModalLoyal = function () {
   loyal.classList.add("hidden");
@@ -111,30 +111,30 @@ const closeModalFunctions = function () {
 // //OPEN FUNCTIONS
 btnsOpenModalEventsNav.addEventListener("click", openModalEvents);
 btnsOpenModalEvents.addEventListener("click", openModalEvents);
-btnsOpenModalJobs.addEventListener("click", openModalJobs);
+// btnsOpenModalJobs.addEventListener("click", openModalJobs);
 btnsOpenModalLoyal.addEventListener("click", openModalLoyal);
 btnsOpenModalFunctions.addEventListener("click", openModalFunctions);
 
 // //CLOSE FUNCTIONS
 btnCloseModalEvents.addEventListener("click", closeModalEvents);
-btnCloseModalJobs.addEventListener("click", closeModalJobs);
+// btnCloseModalJobs.addEventListener("click", closeModalJobs);
 btnCloseModalLoyal.addEventListener("click", closeModalLoyal);
 btnCloseModalFunctions.addEventListener("click", closeModalFunctions);
 
 overlayEvents.addEventListener("click", closeModalEvents);
-overlayJobs.addEventListener("click", closeModalJobs);
+// overlayJobs.addEventListener("click", closeModalJobs);
 overlayLoyal.addEventListener("click", closeModalLoyal);
 overlayFunctions.addEventListener("click", closeModalFunctions);
 
 document.addEventListener("keydown", function (e) {
   if (
     (e.key === "Escape" && !events.classList.contains("hidden")) ||
-    (e.key === "Escape" && !jobs.classList.contains("hidden")) ||
+    // (e.key === "Escape" && !jobs.classList.contains("hidden")) ||
     (e.key === "Escape" && !loyal.classList.contains("hidden")) ||
     (e.key === "Escape" && !functions.classList.contains("hidden"))
   ) {
     closeModalEvents();
-    closeModalJobs();
+    // closeModalJobs();
     closeModalLoyal();
     closeModalFunctions();
   }
