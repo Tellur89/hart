@@ -22,7 +22,7 @@ $breakpoint argument choices
 
 @media (max-width: 1080px) {
   .nav-link:not(:last-child) {
-    margin-right: 5rem !important; }
+    margin-right: 1rem !important; }
   .grid__item--4 {
     display: none; }
   .grid__item--5 {
@@ -47,10 +47,6 @@ $breakpoint argument choices
     justify-content: center; }
     .icons-social-toggle:not(:last-child) {
       margin: 20rem; }
-  .hero-box__text {
-    top: 35% !important;
-    left: 15% !important;
-    width: 70% !important; }
   .grid__sub {
     flex-direction: column-reverse; }
   .MySlides__img {
@@ -60,27 +56,40 @@ $breakpoint argument choices
     padding: 4rem 8rem !important; }
   .grid--10x12 {
     height: 120rem !important;
-    grid-template-rows: repeat(13, 1fr) !important;
+    grid-template-rows: repeat(16, 1fr) !important;
     grid-template-columns: repeat(12, 1fr) !important;
     margin-bottom: 1rem; }
   .grid__item--2 {
     grid-area: 1/1/5/-1 !important; }
   .grid__item--3 {
-    display: none; }
+    grid-area: 13/1/-1/-1 !important; }
   .grid__item--4 {
     display: none; }
   .grid__item--5 {
     grid-area: 5/1/9/-1 !important; }
   .grid__item--6 {
-    grid-area: 9/1/-1/-1 !important;
+    grid-area: 9/1/13/-1 !important;
     background-image: url(../img/drinks.jpg) !important;
-    background-position: 50% 60% !important; }
-  .grid__item--7 {
-    grid-area: 13/2/-1/12 !important; }
-  .grid__item--8 {
-    grid-area: 9/1/13/7 !important; } }
+    background-position: 50% 60% !important; } }
 
 @media (max-width: 600px) {
+  .grid--10x12 {
+    height: 160rem !important;
+    grid-template-rows: repeat(18, 1fr) !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    margin-bottom: 1rem; }
+  .grid__item--2 {
+    grid-area: 1/1/5/-1 !important; }
+  .grid__item--3 {
+    grid-area: 15/1/-1/-1 !important; }
+  .grid__item--4 {
+    display: none; }
+  .grid__item--5 {
+    grid-area: 5/1/9/-1 !important; }
+  .grid__item--6 {
+    grid-area: 9/1/15/-1 !important;
+    background-image: url(../img/drinks.jpg) !important;
+    background-position: 50% 60% !important; }
   .about__container {
     width: 85% !important;
     padding: 2rem !important;
@@ -159,22 +168,27 @@ body {
 
 .heading-primary {
   color: #c34954;
-  text-transform: uppercase;
-  font-family: "Libre Baskerville", serif;
-  font-size: 5.5rem;
-  font-weight: 400;
+  font-family: "Hart", serif;
+  font-size: 7rem;
+  font-weight: 500;
   letter-spacing: 1.5rem;
   text-align: center;
   width: 100%;
   padding: 0; }
   .heading-primary--and {
-    color: #719565; }
+    color: #719565;
+    font-size: 5rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--and {
+        font-size: 3rem; } }
   @media (max-width: 56.25em) {
     .heading-primary {
       padding-bottom: 2rem; } }
   @media (max-width: 37.5em) {
     .heading-primary {
-      font-size: 3rem; } }
+      display: flex;
+      flex-direction: column;
+      font-size: 6.5rem; } }
 
 .heading-secondary {
   color: #313131;
@@ -221,7 +235,7 @@ body {
     font-weight: 300 !important;
     text-transform: capitalize !important; }
   .text--bold {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Hart", serif;
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase !important; }
@@ -359,7 +373,7 @@ body {
 .card-header {
   text-align: center !important;
   font-size: 2.5rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Hart", serif;
   font-weight: 600;
   background-color: transparent !important;
   border-bottom: 1px solid black !important;
@@ -448,6 +462,10 @@ body {
 
 .btn--text:hover {
   color: white !important; }
+
+.link--btn-blue {
+  color: #c34954 !important;
+  font-weight: 700; }
 
 .tile {
   height: 100%; }
@@ -583,8 +601,30 @@ body {
 .icon--faded {
   color: #c34954; }
 
+.logo--nav {
+  display: none;
+  position: absolute;
+  height: 26rem;
+  width: 20rem;
+  opacity: 0.25;
+  z-index: -10;
+  margin-top: -2rem; }
+  @media (max-width: 992px) {
+    .logo--nav {
+      display: block; } }
+
+.logo--address {
+  position: absolute;
+  transform: -50% -50%;
+  display: flex;
+  justify-self: center;
+  height: 26rem;
+  width: 20rem;
+  opacity: 0.25;
+  z-index: -100; }
+
 .hidden {
-  display: none; }
+  display: none !important; }
 
 .card-header button {
   color: black;
@@ -605,17 +645,22 @@ body {
 .jobs,
 .loyal,
 .functions,
+.xmas,
 .breakfast,
 .menus,
 .drinks,
 .kids,
 .free,
 .sunday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 80%;
+  max-width: 142rem;
   height: 90%;
   position: fixed;
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(../img/background-big.jpg);
@@ -630,6 +675,7 @@ body {
     .jobs,
     .loyal,
     .functions,
+    .xmas,
     .breakfast,
     .menus,
     .drinks,
@@ -643,6 +689,7 @@ body {
     .jobs,
     .loyal,
     .functions,
+    .xmas,
     .breakfast,
     .menus,
     .drinks,
@@ -657,6 +704,7 @@ body {
     .jobs,
     .loyal,
     .functions,
+    .xmas,
     .breakfast,
     .menus,
     .drinks,
@@ -665,22 +713,101 @@ body {
     .sunday {
       width: 98%; } }
 
-.jobs,
+.xmas {
+  width: 80% !important;
+  max-width: 142rem !important;
+  text-align: center !important;
+  padding: 4rem 8rem 4rem 8rem !important;
+  color: #ffff !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: 100;
+  align-items: flex-start !important; }
+  @media (max-width: 56.25em) {
+    .xmas {
+      overflow-y: scroll; } }
+  @media (max-width: 37.5em) {
+    .xmas {
+      overflow-y: scroll;
+      padding: 7rem 2rem 2rem 2rem !important;
+      height: 65%;
+      width: 95% !important; } }
+
+.xmas__content {
+  z-index: 100;
+  margin: auto;
+  width: 100%;
+  align-items: center; }
+
+.div-btn {
+  width: 50%;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-evenly !important;
+  margin: 0 auto; }
+  @media (max-width: 75em) {
+    .div-btn {
+      flex-direction: column; } }
+
+.xmas p,
+.xmas h2,
+.xmas button {
+  color: #ffff !important;
+  z-index: 100; }
+
+.myVideo {
+  width: 80% !important;
+  max-width: 142rem !important;
+  height: 90%; }
+
+#myVideo {
+  object-fit: cover !important;
+  height: min-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw; }
+  @media (max-width: 56.25em) {
+    #myVideo {
+      height: 120% !important; } }
+  @media (max-width: 450px) {
+    #myVideo {
+      height: 135% !important; } }
+  @media (max-width: 350px) {
+    #myVideo {
+      height: 160% !important; } }
+  @media (max-width: 320px) {
+    #myVideo {
+      height: 180% !important; } }
+
+.loyal {
+  width: 100rem !important;
+  max-width: 90% !important;
+  max-height: 95%;
+  height: min-content !important; }
+
+.functions {
+  width: 70rem !important;
+  max-width: 90% !important;
+  height: min-content !important; }
+
 .loyal,
 .functions {
-  height: min-content !important;
-  overflow-y: hidden !important;
-  text-align: center; }
+  overflow-y: hidden;
+  text-align: center;
+  padding: 4rem !important;
+  justify-content: center; }
   @media (max-width: 75em) {
-    .jobs,
     .loyal,
     .functions {
-      padding: 7rem 3rem 1rem 3rem; } }
+      padding: 3rem !important; } }
 
 .overlay-events,
 .overlay-jobs,
 .overlay-loyal,
 .overlay-functions,
+.overlay-xmas,
 .overlay-breakfast,
 .overlay-menus,
 .overlay-drinks,
@@ -700,6 +827,7 @@ body {
 .close-modal-jobs,
 .close-modal-loyal,
 .close-modal-functions,
+.close-modal-xmas,
 .close-modal-breakfast,
 .close-modal-menus,
 .close-modal-drinks,
@@ -718,6 +846,7 @@ body {
 
 .popup__content--video {
   width: 70%;
+  height: min-content;
   display: flex;
   justify-content: center; }
   @media (max-width: 37.5em) {
@@ -725,7 +854,6 @@ body {
       width: 80%; } }
 
 .popup__content--video video {
-  height: min-content !important;
   width: 70%; }
   @media (max-width: 37.5em) {
     .popup__content--video video {
@@ -734,11 +862,14 @@ body {
 .popup__content--text {
   margin-top: 5rem;
   padding: 0 1.5rem;
-  width: 100%;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .popup__content--text {
+      max-width: 100%; } }
   .popup__content--text h2 {
     font-size: 3rem; }
   .popup__content--text h5 {
@@ -785,6 +916,89 @@ body {
 
 .social__icons a:not(:last-child) {
   margin-right: 7rem; }
+
+.whatson-info {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 3px;
+  padding: 0 6rem 1rem 6rem; }
+  @media (max-width: 56.25em) {
+    .whatson-info {
+      width: 100%;
+      padding: 3rem; } }
+  .whatson-info__img {
+    height: 100%;
+    transform: translateX(0rem) scale(1.4);
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .whatson-info__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .whatson-info__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left !important;
+    -webkit-shape-outside: circle(50%);
+    shape-outside: circle(50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem);
+    position: relative !important;
+    overflow: hidden; }
+    .whatson-info__shape:hover img {
+      z-index: 1;
+      transform: translateX(0rem) scale(1.3);
+      filter: blur(3px) brightness(80%); }
+    .whatson-info__shape:hover figcaption {
+      opacity: 1;
+      transform: translate(-50%, -50%); }
+    @media (max-width: 37.5em) {
+      .whatson-info__shape {
+        transform: translateX(-3rem); } }
+  .whatson-info__shape--right {
+    width: 20rem;
+    height: 20rem;
+    float: right !important;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(3rem);
+    position: relative !important;
+    overflow: hidden; }
+    .whatson-info__shape--right:hover img {
+      z-index: 1;
+      transform: translateX(0rem) scale(1.3);
+      filter: blur(3px) brightness(80%); }
+    .whatson-info__shape--right:hover figcaption {
+      opacity: 1;
+      transform: translate(-50%, -50%); }
+    @media (max-width: 37.5em) {
+      .whatson-info__shape--right {
+        transform: translateX(3rem); } }
+  .whatson-info__text {
+    display: inline !important;
+    text-align: left !important; }
+    .whatson-info__text--title {
+      text-align: center !important;
+      margin: 0 auto !important;
+      padding-bottom: 2rem; }
+  .whatson-info__text--right {
+    display: inline !important;
+    text-align: right !important; }
+    .whatson-info__text--right--title {
+      text-align: center !important;
+      margin: 0 auto !important;
+      padding-bottom: 2rem; }
 
 .about {
   background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/pub.jpg);
@@ -882,8 +1096,7 @@ body {
       background-image: url(../img/food2.jpg);
       background-position: 50% 75%; }
     .grid__item--3 {
-      grid-area: 1/9/3/-1;
-      background-image: linear-gradient(rgba(104, 117, 130, 0.2), rgba(104, 117, 130, 0.2)), url(../img/img1.jpg); }
+      grid-area: 1/9/4/-1; }
     .grid__item--4 {
       grid-area: 5/1/8/4;
       background-image: linear-gradient(rgba(104, 117, 130, 0.2), rgba(104, 117, 130, 0.2)), url(../img/img4.jpg); }
@@ -891,8 +1104,8 @@ body {
       grid-area: 5/4/8/9;
       background-image: url(../img/img5.jpg); }
     .grid__item--6 {
-      grid-area: 3/9/8/-1;
-      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/img6.JPG);
+      grid-area: 4/9/8/-1;
+      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/img6.jpg);
       background-size: cover;
       background-position: 50% 80%; }
     .grid__item--9 {
@@ -991,15 +1204,15 @@ body {
     .grid-menus__item--3 {
       background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/food.jpg); }
     .grid-menus__item--4 {
-      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/kids.JPG); }
+      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/kids.jpg); }
     .grid-menus__item--5 {
       background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/gluten.jpg);
       background-position: 30% 50%; }
     .grid-menus__item--6 {
-      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/roast.jpeg); }
+      background-image: linear-gradient(rgba(137, 168, 201, 0.55), rgba(78, 124, 173, 0.5), rgba(137, 168, 201, 0.55)), url(../img/roast.jpg); }
 
 .header {
-  padding: 3.5rem 3.5rem 1.5rem 3.5rem;
+  padding: 3.5rem .5rem 1.5rem .5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1014,19 +1227,19 @@ body {
 
 .hero-box {
   width: 100% !important;
-  height: 80rem !important;
+  height: 70rem !important;
   display: flex;
   justify-content: center;
   position: relative; }
   .hero-box__pic {
-    height: 80rem !important;
+    height: 70rem !important;
     width: 100% !important; }
   .hero-box__text {
     position: absolute;
-    top: 40%;
-    left: 17%;
+    top: 5%;
+    left: 5%;
     background-image: linear-gradient(to right bottom, rgba(155, 189, 143, 0.9), rgba(155, 189, 143, 0.9));
-    width: 40rem;
+    width: 90%;
     height: min-content;
     border-radius: 10px;
     text-align: center;
@@ -1058,7 +1271,7 @@ body {
       justify-content: space-between; } }
   .info__div {
     height: min-content;
-    width: 33rem;
+    width: 40rem;
     text-align: center; }
     @media (max-width: 75em) {
       .info__div {
